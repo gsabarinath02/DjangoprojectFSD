@@ -1,0 +1,9 @@
+h2 {
+  background: lightgray;
+  width: 250px;
+}
+
+span {
+  color: red;
+  text-decoration: underline;
+}

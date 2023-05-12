@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Your First Django App</title>
+    <link rel="stylesheet" type='text/css' href="{% static 'style.css' %}">
+  </head>
+  <body>
+    <h2>Django App: First Steps</h2>
+    {% if name == '' %}
+      <p>Hello <span>buddy</span>,</p>
+    {% else %}
+      <p>Hello <span>{{ name }}</span>,</p>
+    {% endif %}
+    <p>You have visited <span>{{ count }}</span> times!</p>
+    <p>The main files in Django project are</p>
+    <ol>
+      {% for f in files %}
+        <li>{{ f }}</li>
+      {% endfor %}
+    </ol>
+    <h3>Degrees offered</h3>
+    <table border="1">
+      <tr>
+        <th>Title</th>
+        <th>Branch</th>
+      </trrrrr>
+      {% for r in degree_rows %}
+        <tr>
+          <td>{{ r.title }}</td>
+          <td>{{ r.branch }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
